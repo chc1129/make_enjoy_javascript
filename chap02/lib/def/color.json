@@ -1,0 +1,17 @@
+{
+	"!name": "lavjs",
+	"COLOR": {
+		"convert": {
+			"!type": "fn(color: [number, number, number], from: string, to?: string) -> [number, number, number]"
+		},
+		"isRGBSaturated": {
+			"!type": "fn() -> bool"
+		},
+		"isYxySaturated": {
+			"!type": "fn() -> bool"
+		},
+		"isMunsellSaturated": {
+			"!type": "fn() -> bool"
+		}
+	}
+}

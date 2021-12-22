@@ -1,0 +1,130 @@
+{
+	"!name": "lavjs",
+	"CROQUJS": {
+		"Paper": {
+			"!type": "fn(width?: number, height?: number, isVisible?: bool)",
+			"prototype": {
+				"width": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"height": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"setSize": {
+					"!type": "fn(width: number, height: number) -> this"
+				},
+				"clear": {
+					"!type": "fn(style?: string, alpha?: number) -> this"
+				},
+				"getPixel": {
+					"!type": "fn(x: number, y: number) -> [number, number, number, number]"
+				},
+				"setPixel": {
+					"!type": "fn(x: number, y: number, rgba: [number, number, number, number]) -> this"
+				},
+				"animate": {
+					"!type": "fn(callback: fn(?), args_array: [?]) -> this"
+				},
+				"stop": {
+					"!type": "fn() -> this"
+				},
+				"deltaTime": {
+					"!type": "fn() -> number"
+				},
+				"frame": {
+					"!type": "fn() -> number"
+				},
+				"fps": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"frameLength": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"totalFrame": {
+					"!type": "fn() -> number"
+				},
+				"makePage": {
+					"!type": "fn(pageName: string) -> +CROQUJS.Paper"
+				},
+				"getPage": {
+					"!type": "fn(pageName: string) -> +CROQUJS.Paper"
+				},
+				"addChild": {
+					"!type": "fn(paper: +CROQUJS.Paper)"
+				},
+				"removeChild": {
+					"!type": "fn(paper: +CROQUJS.Paper)"
+				},
+				"getRuler": {
+					"!type": "fn() -> +RULER.Ruler"
+				},
+				"saveImage": {
+					"!type": "fn(fileName?: string) -> this"
+				},
+				"gridVisible": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"drawGrid": {
+					"!type": "fn()"
+				},
+				"onKeyDown": {
+					"!type": "fn(handler?: fn(key: string, e: KeyboardEvent)) -> !this|fn(?)"
+				},
+				"onKeyUp": {
+					"!type": "fn(handler?: fn(key: string, e: KeyboardEvent)) -> !this|fn(?)"
+				},
+				"keyArrowLeft": {
+					"!type": "fn() -> bool"
+				},
+				"keyArrowUp": {
+					"!type": "fn() -> bool"
+				},
+				"keyArrowRight": {
+					"!type": "fn() -> bool"
+				},
+				"keyArrowDown": {
+					"!type": "fn() -> bool"
+				},
+				"onMouseDown": {
+					"!type": "fn(handler?: fn(x: number, y: number, e: MouseEvent)) -> !this|fn(?)"
+				},
+				"onMouseMove": {
+					"!type": "fn(handler?: fn(x: number, y: number, e: MouseEvent)) -> !this|fn(?)"
+				},
+				"onMouseUp": {
+					"!type": "fn(handler?: fn(x: number, y: number, e: MouseEvent)) -> !this|fn(?)"
+				},
+				"onMouseClick": {
+					"!type": "fn(handler?: fn(x: number, y: number, e: MouseEvent)) -> !this|fn(?)"
+				},
+				"onMouseWheel": {
+					"!type": "fn(handler?: fn(delta: number, e: MouseEvent)) -> !this|fn(?)"
+				},
+				"mouseX": {
+					"!type": "fn() -> number"
+				},
+				"mouseY": {
+					"!type": "fn() -> number"
+				},
+				"mouseLeft": {
+					"!type": "fn() -> bool"
+				},
+				"mouseRight": {
+					"!type": "fn() -> bool"
+				},
+				"mouseMiddle": {
+					"!type": "fn() -> bool"
+				}
+			}
+		},
+		"now": {
+			"!type": "fn()"
+		},
+		"removeAll": {
+			"!type": "fn(?)"
+		},
+		"currentPaper": {
+			"!type": "fn(paper?: +CROQUJS.Paper) -> +CROQUJS.Paper"
+		}
+	}
+}
