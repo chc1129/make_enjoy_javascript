@@ -1,0 +1,103 @@
+{
+	"!name": "lavjs",
+	"SENSOR": {
+		"Sensor": {
+			"!type": "fn()",
+			"prototype": {
+			}
+		},
+		"Camera": {
+			"!type": "fn(width?: number, height?: number)",
+			"prototype": {
+				"!proto": "SENSOR.Sensor.prototype",
+				"start": {
+					"!type": "fn() -> +Promise"
+				},
+				"getImage": {
+					"!type": "fn() -> +HTMLVideoElement"
+				}
+			}
+		},
+		"Microphone": {
+			"!type": "fn()",
+			"prototype": {
+				"!proto": "SENSOR.Sensor.prototype",
+				"start": {
+					"!type": "fn() -> +Promise"
+				},
+				"getLevel": {
+					"!type": "fn() -> number"
+				}
+			}
+		},
+		"Geolocation": {
+			"!type": "fn()",
+			"prototype": {
+				"!proto": "SENSOR.Sensor.prototype",
+				"start": {
+					"!type": "fn() -> +Promise"
+				},
+				"getLocation": {
+					"!type": "fn() -> object"
+				}
+			}
+		},
+		"Weather": {
+			"!type": "fn(latitude?: number, longitude?: number)",
+			"prototype": {
+				"!proto": "SENSOR.Sensor.prototype",
+				"start": {
+					"!type": "fn() -> +Promise"
+				},
+				"getWeather": {
+					"!type": "fn() -> object"
+				}
+			}
+		},
+		"Motion": {
+			"!type": "fn()",
+			"prototype": {
+				"!proto": "SENSOR.Sensor.prototype",
+				"start": {
+					"!type": "fn() -> +Promise"
+				},
+				"orientationX": {
+					"!type": "fn() -> number"
+				},
+				"orientationY": {
+					"!type": "fn() -> number"
+				},
+				"orientationZ": {
+					"!type": "fn() -> number"
+				},
+				"accelerationX": {
+					"!type": "fn() -> number"
+				},
+				"accelerationY": {
+					"!type": "fn() -> number"
+				},
+				"accelerationZ": {
+					"!type": "fn() -> number"
+				},
+				"accelerationGravityX": {
+					"!type": "fn() -> number"
+				},
+				"accelerationGravityY": {
+					"!type": "fn() -> number"
+				},
+				"accelerationGravityZ": {
+					"!type": "fn() -> number"
+				},
+				"rotationX": {
+					"!type": "fn() -> number"
+				},
+				"rotationY": {
+					"!type": "fn() -> number"
+				},
+				"rotationZ": {
+					"!type": "fn() -> number"
+				}
+			}
+		}
+	}
+}
