@@ -1,0 +1,70 @@
+{
+	"!name": "lavjs",
+	"RULER": {
+		"Ruler": {
+			"!type": "fn(ctx: +CROQUJS.Paper|+CanvasRenderingContext2D)",
+			"prototype": {
+				"makeChild": {
+					"!type": "fn() -> +TURTLE.Turtle"
+				},
+				"save": {
+					"!type": "fn(saveContext?: bool) -> !this"
+				},
+				"restore": {
+					"!type": "fn(restoreContext?: bool) -> !this"
+				},
+				"stroke": {
+					"!type": "fn(stroke?: +STYLE.Stroke) -> !this|+STYLE.Stroke"
+				},
+				"fill": {
+					"!type": "fn(fill?: +STYLE.Fill) -> !this|+STYLE.Fill"
+				},
+				"edge": {
+					"!type": "fn(func?: fn(?)) -> !this|fn(?)"
+				},
+				"context": {
+					"!type": "fn(ctx?: +CROQUJS.Paper|+CanvasRenderingContext2D) -> !this|+CROQUJS.Paper|+CanvasRenderingContext2D"
+				},
+				"paper": {
+					"!type": "fn() -> +CROQUJS.Paper|+CanvasRenderingContext2D"
+				},
+				"beginPath": {
+					"!type": "fn() -> !this"
+				},
+				"closePath": {
+					"!type": "fn() -> !this"
+				},
+				"moveTo": {
+					"!type": "fn(x: number, y: number) -> !this"
+				},
+				"lineTo": {
+					"!type": "fn(x1: number, y1: number) -> !this"
+				},
+				"quadraticCurveTo": {
+					"!type": "fn(x1: number, y1: number, x2: number, y2: number) -> !this"
+				},
+				"bezierCurveTo": {
+					"!type": "fn(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number) -> !this"
+				},
+				"arc": {
+					"!type": "fn(cx: number, cy: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: bool) -> !this"
+				},
+				"ellipse": {
+					"!type": "fn(x: number, y: number, radiusX: number, radiusY: number, rotation: number, startAngle: number, endAngle: number, anticlockwise?: bool) -> !this"
+				},
+				"rect": {
+					"!type": "fn(x: number, y: number, width: number, height: number) -> !this"
+				},
+				"draw": {
+					"!type": "fn(mode: string) -> !this"
+				},
+				"circle": {
+					"!type": "fn(cx: number, cy: number, r: number|[number], opt_dir?: number, opt_deg?: number, opt_anticlockwise?: bool) -> !this"
+				},
+				"line": {
+					"!type": "fn(fromX: number, fromY: number, toX: number, toY: number) -> !this"
+				}
+			}
+		}
+	}
+}
