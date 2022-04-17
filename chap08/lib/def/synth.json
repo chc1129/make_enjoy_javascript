@@ -1,0 +1,104 @@
+{
+	"!name": "lavjs",
+	"SYNTH": {
+		"Synth": {
+			"!type": "fn()",
+			"prototype": {
+				"context": {
+					"!type": "fn() -> +AudioContext"
+				},
+				"time": {
+					"!type": "fn() -> number"
+				},
+				"speaker": {
+					"!type": "fn(params: object) -> +PATCH.SpeakerPatch"
+				},
+				"makeOscillator": {
+					"!type": "fn(params: object) -> +PATCH.OscillatorPatch"
+				},
+				"makeOsc": {
+					"!type": "fn(params: object) -> +PATCH.OscillatorPatch"
+				},
+				"makeNoise": {
+					"!type": "fn(params: object) -> +PATCH.NoisePatch"
+				},
+				"makeMicrophone": {
+					"!type": "fn(params: object) -> +PATCH.MicrophonePatch"
+				},
+				"makeMic": {
+					"!type": "fn(params: object) -> +PATCH.MicrophonePatch"
+				},
+				"makeBufferSource": {
+					"!type": "fn(params: object) -> +PATCH.BufferSourcePatch"
+				},
+				"makeFile": {
+					"!type": "fn(params: object) -> +PATCH.BufferSourcePatch"
+				},
+				"makeGain": {
+					"!type": "fn(params: object) -> +PATCH.GainPatch"
+				},
+				"makeBiquadFilter": {
+					"!type": "fn(params: object) -> +PATCH.BiquadFilterPatch"
+				},
+				"makeFilter": {
+					"!type": "fn(params: object) -> +PATCH.BiquadFilterPatch"
+				},
+				"makeEnvelope": {
+					"!type": "fn(params: object) -> +PATCH.EnvelopePatch"
+				},
+				"makeEnv": {
+					"!type": "fn(params: object) -> +PATCH.EnvelopePatch"
+				},
+				"makeScope": {
+					"!type": "fn(params: object) -> +PATCH.normalizeParams"
+				},
+				"connect": {
+					"!type": "fn(ps: [+PATCH.Patch]) -> !this"
+				},
+				"play": {
+					"!type": "fn(time?: number) -> !this"
+				},
+				"stop": {
+					"!type": "fn(time?: number) -> !this"
+				}
+			}
+		},
+		"Scheduler": {
+			"!type": "fn(timestampFunction: fn() -> number)",
+			"prototype": {
+				"time": {
+					"!type": "fn() -> number"
+				},
+				"insert": {
+					"!type": "fn(time: number, callback: fn(?), args?: [?]) -> !this"
+				},
+				"nextTick": {
+					"!type": "fn(time: number, callback: fn(?), args?: [?]) -> !this"
+				},
+				"start": {
+					"!type": "fn(callback?: fn(?), args?: [?]) -> !this"
+				},
+				"stop": {
+					"!type": "fn(reset?: boolean) -> !this"
+				}
+			}
+		},
+		"Sequencer": {
+			"!type": "fn(ctx: +SYNTH.Synth|+AudioContext, params: object)",
+			"prototype": {
+				"play": {
+					"!type": "fn(delay: number)"
+				},
+				"reset": {
+					"!type": "fn()"
+				},
+				"setScore": {
+					"!type": "fn(notes: string) -> !this"
+				},
+				"setRhythm": {
+					"!type": "fn(rhythm: string) -> !this"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+{
+	"!name": "lavjs",
+	"WIDGET": {
+		"Widget": {
+			"!type": "fn(width?: number, height?: number, cls?: string)",
+			"prototype": {
+				"domElement": {
+					"!type": "fn() -> ?"
+				},
+				"setFullWidth": {
+					"!type": "fn(flag: bool)"
+				},
+				"setVisible": {
+					"!type": "fn(flag: bool)"
+				}
+			}
+		},
+		"Switch": {
+			"!type": "fn(label_s_num?: string|[string]|number, value?: number, opt?: objectect)",
+			"prototype": {
+				"!proto": "WIDGET.Widget.prototype",
+				"value": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"onClick": {
+					"!type": "fn(handler?: fn(?), doFirst?: boolean) -> !this|fn(?)"
+				}
+			}
+		},
+		"Toggle": {
+			"!type": "fn(label_s_num?: string|[string]|number, state_s?: bool|[bool], opt?: object)",
+			"prototype": {
+				"!proto": "WIDGET.Widget.prototype",
+				"value": {
+					"!type": "fn(vals?: ?) -> !this|number"
+				},
+				"onClick": {
+					"!type": "fn(handler?: fn(?), doFirst?: boolean) -> !this|fn(?)"
+				}
+			}
+		},
+		"Output": {
+			"!type": "fn(width: number, height?: number, opt?: object)",
+			"prototype": {
+				"!proto": "WIDGET.Widget.prototype",
+				"value": {
+					"!type": "fn(vals?: ?) -> !this|string"
+				}
+			}
+		},
+		"Chat": {
+			"!type": "fn(width: number, height?: number)",
+			"prototype": {
+				"!proto": "WIDGET.Widget.prototype",
+				"print": {
+					"!type": "fn(args?: [?]) -> !this"
+				},
+				"println": {
+					"!type": "fn(args?: [?]) -> !this"
+				},
+				"input": {
+					"!type": "fn(args?: [?]) -> string"
+				},
+				"sleep": {
+					"!type": "fn(seconds: number) -> !Promise"
+				}
+			}
+		},
+		"SliderBase": {
+			"!type": "fn()",
+			"prototype": {
+				"!proto": "WIDGET.Widget.prototype",
+				"min": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"max": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"value": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"onChange": {
+					"!type": "fn(handler?: fn(?)) -> !this|fn(?)"
+				}
+			}
+		},
+		"Slider": {
+			"!type": "fn(min?: number, max?: number, value?: number, opt?: object)",
+			"prototype": {
+				"!proto": "WIDGET.SliderBase.prototype"
+			}
+		},
+		"Thermometer": {
+			"!type": "fn(min?: number, max?: number, value?: number, opt?: object)",
+			"prototype": {
+				"!proto": "WIDGET.SliderBase.prototype"
+			}
+		},
+		"Chart": {
+			"!type": "fn(width?: number, height?: number)",
+			"prototype": {
+				"!proto": "WIDGET.Widget.prototype",
+				"setLegendWidth": {
+					"!type": "fn(px: number)"
+				},
+				"setDigits": {
+					"!type": "fn(num: number)"
+				},
+				"setItems": {
+					"!type": "fn(items: object)"
+				},
+				"addData": {
+					"!type": "fn(data: object)"
+				}
+			}
+		}
+	}
+}
