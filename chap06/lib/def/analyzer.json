@@ -1,0 +1,31 @@
+{
+	"!name": "lavjs",
+	"ANALYZER": {
+		"ScopeBase": {
+			"!type": "fn(width: number, height: number)",
+			"prototype": {
+				"setSynchronized": {
+					"!type": "fn(enabled: boolean)"
+				}
+			}
+		},
+		"WaveformScope": {
+			"!type": "fn(width: number, height: number)",
+			"prototype": {
+				"!proto": "ANALYZER.ScopeBase.prototype",
+				"setDataSource": {
+					"!type": "fn(dataSource: +PATCH.DataSource)"
+				}
+			}
+		},
+		"SpectrumScope": {
+			"!type": "fn(width: number, height: number)",
+			"prototype": {
+				"!proto": "ANALYZER.ScopeBase.prototype",
+				"setDataSource": {
+					"!type": "fn(dataSource: +PATCH.DataSource)"
+				}
+			}
+		}
+	}
+}

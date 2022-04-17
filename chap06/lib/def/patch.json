@@ -1,0 +1,178 @@
+{
+	"!name": "lavjs",
+	"PATCH": {
+		"Patch": {
+			"!type": "fn(synth: +SYNTH.Synth)",
+			"prototype": {
+				"connect": {
+					"!type": "fn(target: +PATCH.Patch|+AudioParam)"
+				}
+			}
+		},
+		"SourcePatch": {
+			"!type": "fn(synth: +SYNTH.Synth)",
+			"prototype": {
+				"!proto": "PATCH.Patch.prototype",
+				"play": {
+					"!type": "fn(time?: number) -> !this"
+				},
+				"stop": {
+					"!type": "fn(time?: number) -> !this"
+				},
+				"getOutput": {
+					"!type": "fn() -> +AudioNode"
+				}
+			}
+		},
+		"OscillatorPatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.SourcePatch.prototype",
+				"type": {
+					"!type": "fn(value?: string) -> !this|string"
+				},
+				"frequency": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"detune": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"gain": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		},
+		"NoisePatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.SourcePatch.prototype",
+				"gain": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		},
+		"MicrophonePatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.SourcePatch.prototype",
+				"type": {
+					"!type": "fn(value?: string) -> !this|string"
+				},
+				"frequency": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"Q": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"gain": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		},
+		"BufferSourcePatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.SourcePatch.prototype",
+				"loadFile": {
+					"!type": "fn(url: string)"
+				},
+				"play": {
+					"!type": "fn(time?: number)"
+				},
+				"stop": {
+					"!type": "fn(time?: number)"
+				},
+				"playbackRate": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"detune": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"gain": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		},
+		"GainPatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.Patch.prototype",
+				"getInput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"getOutput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"gain": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		},
+		"BiquadFilterPatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.Patch.prototype",
+				"getInput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"getOutput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"type": {
+					"!type": "fn(value?: string) -> !this|string"
+				},
+				"frequency": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				},
+				"Q": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		},
+		"EnvelopePatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.Patch.prototype",
+				"getInput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"getOutput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"on": {
+					"!type": "fn(time?: number) -> !this"
+				},
+				"off": {
+					"!type": "fn(time?: number) -> !this"
+				}
+			}
+		},
+		"ScopePatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.Patch.prototype",
+				"getInput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"getOutput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"smoothingTimeConstant": {
+					"!type": "fn(value?: number) -> !this|number"
+				}
+			}
+		},
+		"SpeakerPatch": {
+			"!type": "fn(synth: +SYNTH.Synth, params?: object)",
+			"prototype": {
+				"!proto": "PATCH.Patch.prototype",
+				"getInput": {
+					"!type": "fn() -> +AudioNode"
+				},
+				"gain": {
+					"!type": "fn(value?: number, time?: number, type?: string) -> !this|+AudioParam"
+				}
+			}
+		}
+	}
+}
