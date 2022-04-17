@@ -1,0 +1,203 @@
+{
+	"!name": "lavjs",
+	"TURTLE": {
+		"Turtle": {
+			"!type": "fn(ctx: +CROQUJS.Paper|+CanvasRenderingContext2D, normalDeg: number)",
+			"prototype": {
+				"makeChild": {
+					"!type": "fn() -> +TURTLE.Turtle"
+				},
+				"save": {
+					"!type": "fn(opt_saveContext?: bool) -> !this"
+				},
+				"restore": {
+					"!type": "fn(opt_restoreContext?: bool) -> !this"
+				},
+				"go": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"forward": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"fd": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"back": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"bk": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"backward": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"turnRight": {
+					"!type": "fn(deg: number) -> !this"
+				},
+				"turnLeft": {
+					"!type": "fn(deg: number) -> !this"
+				},
+				"tr": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"tl": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"right": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"left": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"rt": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"lt": {
+					"!type": "fn(step: number) -> !this"
+				},
+				"x": {
+					"!type": "fn(val: number) -> !this|number"
+				},
+				"y": {
+					"!type": "fn(val: number) -> !this|number"
+				},
+				"direction": {
+					"!type": "fn(deg: number) -> !this|number"
+				},
+				"heading": {
+					"!type": "fn(deg: number) -> !this|number"
+				},
+				"moveTo": {
+					"!type": "fn(x: number, y: number, dir?: number) -> !this"
+				},
+				"gatherTo": {
+					"!type": "fn(turtle: +TURTLE.Turtle) -> !this"
+				},
+				"home": {
+					"!type": "fn() -> !this"
+				},
+				"setHome": {
+					"!type": "fn() -> !this"
+				},
+				"curveRight": {
+					"!type": "fn(step0: number, deg: number, step1: number, deg?: number, step?: number) -> !this"
+				},
+				"curveLeft": {
+					"!type": "fn(step0: number, deg: number, step1: number, deg?: number, step?: number) -> !this"
+				},
+				"cr": {
+					"!type": "fn(step0: number, deg: number, step1: number, deg?: number, step?: number) -> !this"
+				},
+				"cl": {
+					"!type": "fn(step0: number, deg: number, step1: number, deg?: number, step?: number) -> !this"
+				},
+				"arcRight": {
+					"!type": "fn(r: number|[number], deg: number|[number]) -> !this"
+				},
+				"arcLeft": {
+					"!type": "fn(r: number|[number], deg: number|[number]) -> !this"
+				},
+				"ar": {
+					"!type": "fn(r: number|[number], deg: number|[number]) -> !this"
+				},
+				"al": {
+					"!type": "fn(r: number|[number], deg: number|[number]) -> !this"
+				},
+				"step": {
+					"!type": "fn(val: number) -> !this|number"
+				},
+				"unit": {
+					"!type": "fn(val: number) -> !this|number"
+				},
+				"getDirectionOf": {
+					"!type": "fn(x: number, y: number) -> number"
+				},
+				"towards": {
+					"!type": "fn(x: number, y: number) -> number"
+				},
+				"getDirectionOfHome": {
+					"!type": "fn() -> number"
+				},
+				"getDistanceTo": {
+					"!type": "fn(x: number, y: number) -> number"
+				},
+				"getDistanceToHome": {
+					"!type": "fn() -> number"
+				},
+				"dot": {
+					"!type": "fn() -> !this"
+				},
+				"circle": {
+					"!type": "fn(r: number|[number], deg: number|[number], anticlockwise?: bool) -> !this"
+				},
+				"image": {
+					"!type": "fn(image: +Image|+CROQUJS.Paper|+CanvasRenderingContext2D, cx: number, cy: number, scale?: number)"
+				},
+				"penUp": {
+					"!type": "fn() -> !this"
+				},
+				"penDown": {
+					"!type": "fn() -> !this"
+				},
+				"pu": {
+					"!type": "fn() -> !this"
+				},
+				"pd": {
+					"!type": "fn() -> !this"
+				},
+				"up": {
+					"!type": "fn() -> !this"
+				},
+				"down": {
+					"!type": "fn() -> !this"
+				},
+				"pen": {
+					"!type": "fn(val?: bool) -> !this|bool"
+				},
+				"mode": {
+					"!type": "fn(val?: string) -> !this|string"
+				},
+				"stroke": {
+					"!type": "fn(stroke?: +STYLE.Stroke) -> !this|+STYLE.Stroke"
+				},
+				"fill": {
+					"!type": "fn(fill?: +STYLE.Fill) -> !this|+STYLE.Fill"
+				},
+				"edge": {
+					"!type": "fn(func: fn(?)) -> !this|fn(?)"
+				},
+				"context": {
+					"!type": "fn(ctx?: +CROQUJS.Paper|+CanvasRenderingContext2D) -> !this|+CROQUJS.Paper|+CanvasRenderingContext2D"
+				},
+				"paper": {
+					"!type": "fn() -> +CROQUJS.Paper|+CanvasRenderingContext2D"
+				},
+				"localize": {
+					"!type": "fn()"
+				},
+				"scale": {
+					"!type": "fn(rate: number)"
+				},
+
+				"onPenChanged": {
+					"!type": "fn(handler?: fn(?)) -> !this|fn(?)"
+				},
+				"onMoved": {
+					"!type": "fn(handler?: fn(?)) -> !this|fn(?)"
+				},
+				"visible": {
+					"!type": "fn(val: bool) -> !this|bool"
+				},
+				"stepNext": {
+					"!type": "fn(num: number)"
+				},
+				"resetAnimation": {
+					"!type": "fn()"
+				}
+			}
+		},
+		"makeStamp": {
+			"!type": "fn(width: number, height: number, cx: number, cy: number, scale: number, func: fn(?)) -> fn(t: TURTLE.Turtle, var_args: ?)"
+		}
+	}
+}
