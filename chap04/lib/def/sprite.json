@@ -1,0 +1,168 @@
+{
+	"!name": "lavjs",
+	"SPRITE": {
+		"Element": {
+			"!type": "fn(motion?: ?|function, rotation?: ?|function)",
+			"prototype": {
+				"x": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"y": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"direction": {
+					"!type": "fn(deg?: number) -> !this|number"
+				},
+				"moveTo": {
+					"!type": "fn(x: number, y: number, dir?: number) -> !this"
+				},
+				"scale": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"alpha": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"angle": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"angleX": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"angleZ": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"fixedHeading": {
+					"!type": "fn(val?: bool) -> !this|bool"
+				},
+				"speed": {
+					"!type": "fn(val?: number) -> !this|bool"
+				},
+				"setRangeX": {
+					"!type": "fn(min: number, max: number, isLoop: bool)"
+				},
+				"setRangeY": {
+					"!type": "fn(min: number, max: number, isLoop: bool)"
+				},
+				"onBeforeUpdate": {
+					"!type": "fn(func: fn(?), args_array: [?])"
+				},
+				"onUpdate": {
+					"!type": "fn(func: fn(?), args_array: [?])"
+				},
+				"motion": {
+					"!type": "fn(val?: ?|function) -> !this|?|function"
+				},
+				"rotation": {
+					"!type": "fn(val?: ?|function) -> !this|?|function"
+				},
+				"data": {
+					"!type": "fn(val?: ?) -> !this|?"
+				}
+			}
+		},
+		"Sprite": {
+			"!type": "fn(drawingCallback: fn(?), motion?: ?|function, rotation?: ?|function)",
+			"prototype": {
+				"!proto": "SPRITE.Element.prototype",
+				"draw": {
+					"!type": "fn(ctx: +CROQUJS.Paper|+CanvasRenderingContext2D, args_array: [?])"
+				},
+				"collisionRadius": {
+					"!type": "fn(val?: number)"
+				},
+				"onCollision": {
+					"!type": "fn(handler?: ?|function)"
+				}
+			}
+		},
+		"SpriteShape": {
+			"!type": "fn()",
+			"prototype": {
+				"!proto": "SPRITE.Sprite.prototype",
+				"ruler": {
+					"!type": "fn() -> +RULER.Ruler"
+				},
+				"draw": {
+					"!type": "fn(ctx: +CROQUJS.Paper|+CanvasRenderingContext2D)"
+				}
+			}
+		},
+		"Circle": {
+			"!type": "fn(radius?: number)",
+			"prototype": {
+				"!proto": "SPRITE.SpriteShape.prototype",
+				"radius": {
+					"!type": "fn(val?: number) -> !this|number"
+				}
+			}
+		},
+		"Rect": {
+			"!type": "fn(width?: number, height?: number)",
+			"prototype": {
+				"!proto": "SPRITE.SpriteShape.prototype",
+				"width": {
+					"!type": "fn(val?: number) -> !this|number"
+				},
+				"height": {
+					"!type": "fn(val?: number) -> !this|number"
+				}
+			}
+		},
+		"Stage": {
+			"!type": "fn(motion?: ?|function, rotation?: ?|function)",
+			"prototype": {
+				"!proto": "SPRITE.Element.prototype",
+				"makeSprite": {
+					"!type": "fn(drawFunction: fn(?), motion?: ?|function, rotation?: ?|function) -> +SPRITE.Sprite"
+				},
+				"makeStage": {
+					"!type": "fn() -> +SPRITE.Stage"
+				},
+				"add": {
+					"!type": "fn(child: +SPRITE.Element)"
+				},
+				"get": {
+					"!type": "fn(index: number) -> +SPRITE.Element"
+				},
+				"size": {
+					"!type": "fn() -> number"
+				},
+				"forEach": {
+					"!type": "fn(callback: fn(?), thisArg: ?)"
+				},
+				"localize": {
+					"!type": "fn(descendant: +SPRITE.Element, stopRotation?: bool)"
+				},
+				"getPositionOnContext": {
+					"!type": "fn(descendant: +SPRITE.Element) -> [number]"
+				},
+				"draw": {
+					"!type": "fn(ctx: +CROQUJS.Paper|+CanvasRenderingContext2D, args_array: [?])"
+				},
+				"update": {
+					"!type": "fn(deltaTime?: number)"
+				},
+				"addObserver": {
+					"!type": "fn(observer: ?)"
+				}
+			}
+		},
+		"DensityMap": {
+			"!type": "fn(width: number, height: number, gridSize: number)",
+			"prototype": {
+				"update": {
+					"!type": "fn(stage: +SPRITE.Stage)"
+				},
+				"getDensity": {
+					"!type": "fn(x: number, y: number, deg?: number, len?: number) -> number"
+				},
+				"draw": {
+					"!type": "fn(ctx: +CROQUJS.Paper|+CanvasRenderingContext2D, max: number)"
+				}
+			}
+		},
+		"makePlotFunction": {
+			"!type": "fn(descendant: +SPRITE.Element, ancestorStage: +SPRITE.Stage, ctx: +CROQUJS.Paper|+CanvasRenderingContext2D)"
+		}
+	}
+}
